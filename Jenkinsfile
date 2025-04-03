@@ -6,7 +6,7 @@ pipeline {
         FRONTEND_IMAGE_NAME = "mern-studentportal-frontend"         
         IMAGE_TAG           = "latest"         
         DOCKER_REGISTRY     = "docker.io"         
-        DOCKER_REPO         = "kiruthik1304" 
+        DOCKER_REPO         = "naveen11122004" 
         KUBECONFIG = "/home/kiruthik/.kube/config"    
     }      
 
@@ -14,7 +14,7 @@ pipeline {
         stage('Checkout') {             
             steps {                 
                 script {                     
-                    git branch: 'main', url: 'https://github.com/kiruthik13/Devops_tasks.git'                 
+                    git branch: 'main', url: 'https://github.com/naveen-11122004/DEVOPS-1.git'                 
                 }             
             }         
         }          
@@ -38,7 +38,7 @@ pipeline {
         stage('Push Docker Images') {      
             steps {          
                 script {              
-                    sh 'docker login -u kiruthik1304 -p "kiruthik@13"'             
+                    sh 'docker login -u naveen11122004 -p "Naveen2004"'             
                     dockerImageBackend.push("${IMAGE_TAG}")              
                     dockerImageFrontend.push("${IMAGE_TAG}")          
                 }      
